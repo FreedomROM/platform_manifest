@@ -3,11 +3,13 @@
 
   <remote  name="aosp"
            fetch="https://android-review.googlesource.com/" />
+  <remote  name="fr"
+           fetch="https://github.com/FreedomROM" />
   <default revision="refs/tags/android-5.0.2_r1"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="platform/build" groups="pdk,tradefed" >
+  <project path="build" name="platform_build" groups="pdk,tradefed" remote="fr" revision="L" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
